@@ -29,6 +29,15 @@ y_pred = model.predict(X_test)
 betas = model.get_params()
 ```
 
+### Comparison with other implementations over 10,0000 runs
+
+| Feature        | OLSMax (pinv) | OLSMax (qr) | OLSMax (svd) | scikit-learn | statsmodels |
+|---------------|----------------|---------------|---------------|-------------|-------------|
+| Multi-output  | ✅              | ✅             | ✅             | ✅          | ❌          |
+| Intercept     | ✅              | ✅             | ✅             | ✅          | ✅          |
+| Multiple Solvers | ✅          | ✅             | ✅             | ❌          | ❌          |
+| Performance   | 🔥 Fastest      | Moderate       | Slower        | Moderate    | Slowest     |
+| Robustness    | Moderate       | Lower          | ✅ High        | Moderate    | High        |
 
 
 
