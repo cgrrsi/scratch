@@ -15,7 +15,7 @@ The implementation offers a competitive performance compared to `scikit-learn` a
 
 ### Usage 
 
-```
+```python
 from olsmax import OLSMax
 
 # fit
