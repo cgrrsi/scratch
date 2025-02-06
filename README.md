@@ -17,11 +17,14 @@ The implementation offers a competitive performance compared to `scikit-learn` a
 
 ```
 from olsmax import OLSMax
+
 # fit
 model = OLSMax(fit_intercept=True)
 model.fit(X_train, y_train, method='pinv')
+
 # pred
 y_pred = model.predict(X_test)
+
 # betas
 betas = model.get_params()
 ```
