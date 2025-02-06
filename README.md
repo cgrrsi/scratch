@@ -39,5 +39,23 @@ betas = model.get_params()
 | Performance   | Fast      | Fast       | 🔥 Fastest       | Slowest    | Moderate   |
 | Robustness    | High      | Lowest     | 🔥 Highest       | Moderate   | High       |
 
+## 2°) RidgeMax
 
+### Overview
+`RidgeMax` is an implementation of Ridge Regression built from scratch. It supports both univariate and multivariate targets, automatically handles intercept inclusion, and uses a vectorized closed-form solution. In particular, instead of constructing an entire regularization matrix, it adds the regularization parameter directly to the coefficient sub-block of the Gram matrix.
 
+### Usage
+
+```python
+from ridgemax import RidgeMax
+
+# fit
+model = RidgeMax(alpha=1.0, fit_intercept=True)
+model.fit(X_train, y_train)
+
+# pred
+y_pred = model.predict(X_test)
+
+# betas
+betas = model.coef_
+```
