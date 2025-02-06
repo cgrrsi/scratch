@@ -37,7 +37,7 @@ betas = model.get_params()
 | Intercept     | ✅              | ✅             | ✅             | ✅          | ✅          |
 | Multiple Solvers | ✅          | ✅             | ✅             | ❌          | ❌          |
 | Performance   | 🔥 Fastest      | Moderate       | Slower        | Moderate    | Slowest     |
-| Robustness    | Moderate       | Lower          | ✅ High        | Moderate    | High        |
+| Robustness    | 🔥 Highest       | Lowest          | High        | High    | Moderate        |
 
 
 
